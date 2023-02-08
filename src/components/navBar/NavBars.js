@@ -18,7 +18,7 @@ function Navbars() {
             <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none", color:"white"}} to="/">Home</Link></li>
             <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none",color:"white"}} to="/product">Productos</Link></li>
             <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none",color:"white"}} to="/nosotros">Nosotros</Link></li>
-           <CartWidget/>
+           <li><Link to={"/cartlist"}><CartWidget/></Link></li>
           </Nav>
         </Container>
       </Navbar>

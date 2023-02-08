@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemDetail from '../ItemDetail'
+import ItemDetail from '../itemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import "../itemDetailContainer/ItemDetailContainer.css"
@@ -22,7 +22,6 @@ const ItemDetailContainer = () => {
 
   return (
     <div className='itemDetailContainer'>
-   
     {product}
     </div>
   )

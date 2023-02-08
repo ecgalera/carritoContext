@@ -10,24 +10,28 @@ import ItemList from './components/itemList/ItemList';
 // import CategoryItemContainer from './components/CategoryItemContainer';
 import Nosotros from './components/Nosotros';
 import Footer from './components/Footer';
+import CartProvider from './context/CartContext';
+import CartList from './components/cart/CartList';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <NavBars/>
-     
-      <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path='/nosotros' element={<Nosotros/>}/>
-        <Route exact path='/product' element={<ItemListContainers/>}/>
-        <Route exact path='/product/:productoId' element={<ItemDetailContainer/>}/>
-        <Route exact path='/categoria/:categoryId' element={<ItemList/>}/>
-      </Routes>
-      <Footer/>
-   </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBars />
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/nosotros' element={<Nosotros />} />
+          <Route exact path='/product' element={<ItemListContainers />} />
+          <Route exact path='/product/:productoId' element={<ItemDetailContainer />} />
+          <Route exact path='/categoria/:categoryId' element={<ItemList />} />
+          <Route exact path='/cartList' element={<CartList/>}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
   </React.StrictMode>
 );
 

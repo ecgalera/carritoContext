@@ -8,7 +8,7 @@ const ItemListContainers = (props) => {
 
   return (
     <div>
-    <div class="p-3 mb-2 bg-secondary text-white">Sitio de Compras </div>
+    <div className="p-3 mb-2 bg-secondary text-white">Sitio de Compras </div>
     <p class="text-white bg-dark">{props.mensaje}</p>
   
 
