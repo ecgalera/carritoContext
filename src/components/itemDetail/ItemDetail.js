@@ -58,9 +58,17 @@ const ItemDetail = (props) => {
             </Card.Text>
            {/* <Link to={`/product/${id}`}>Ver Detalle del Producto</Link> */}
            <ItemCount stock={10} cantidad={tomarCatidad}/>
-           <div>
+            <div>
                 <button onClick={onAdd}>Agregar al Carrito</button>
-            </div>
+             </div>
+
+           {
+                cantidad>0 &&
+                <Link to="/cartlist">
+                    <button>Ir al carrito</button>
+                </Link>
+            }
+          
           </Card.Body>
         </Card>
       </Container>

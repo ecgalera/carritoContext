@@ -31,15 +31,14 @@ const clear=()=>{
 
 }
 
-
-
-
-
-
+const getTotalProducts = ()=>{
+    const totalProducts = items.reduce((acc,item)=>acc + item.cantidad,0);
+    return totalProducts;
+}
 
 
     return (
-        <CartContext.Provider value={{items, agregarCarrito, removeItems, clear}}>
+        <CartContext.Provider value={{items, agregarCarrito, removeItems, clear, getTotalProducts}}>
             {children}
         </CartContext.Provider>
     )

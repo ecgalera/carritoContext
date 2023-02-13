@@ -9,6 +9,9 @@ import CartWidget from '../CartWidget';
 
 
 function Navbars() {
+
+    
+
   return (
     <div>
       <Navbar bg="dark" variant="dark">

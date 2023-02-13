@@ -10,14 +10,14 @@ const ItemCount = (props) => {
     const addOne = () => {
         if (count < props.stock) {
             setCount(count + 1)
-            props.cantidad(count)
-        }
+           }
+           props.cantidad(count+1)
     }
 
     const disOne = () => {
         if (count > 0) {
             setCount(count - 1)
-            props.cantidad(count)
+            props.cantidad(count-1)
         }
     }
 
