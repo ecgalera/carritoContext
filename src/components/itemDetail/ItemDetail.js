@@ -56,7 +56,7 @@ const ItemDetail = (props) => {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-           {/* <Link to={`/product/${id}`}>Ver Detalle del Producto</Link> */}
+           <Link to={`/products/${id}`}>Ver Detalle del Producto</Link>
            <ItemCount stock={10} cantidad={tomarCatidad}/>
             <div>
                 <button onClick={onAdd}>Agregar al Carrito</button>

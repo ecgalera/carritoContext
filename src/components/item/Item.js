@@ -1,7 +1,6 @@
 
 import React from 'react'
 import { Container } from 'react-bootstrap';
-
 import Card from 'react-bootstrap/Card';
 import "./Item.css"
 import { Link } from 'react-router-dom';
@@ -29,7 +28,7 @@ const item = (props) => {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-           <Link style={{ fontWeight:"bolder", textDecorationLine:"none", fontSize:"15px"}}to={`/product/${id}`}>Ver Detalle del Producto</Link>
+            <Link to={`/product/${id}`}>Detalle del Producto</Link>
            
           </Card.Body>
         </Card>

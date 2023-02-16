@@ -1,28 +1,28 @@
-import React from 'react'
+// import React from 'react'
 import ItemDetail from '../itemDetail/ItemDetail'
-import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import "../itemDetailContainer/ItemDetailContainer.css"
+// import "../itemDetailContainer/ItemDetailContainer.css"
+import { useParams } from 'react-router-dom'
 
 
 const ItemDetailContainer = () => {
 
-    const {productoId} = useParams()
-    const [product, setProduct] = useState()
+    const {productoId}= useParams()
+    const [productos, setProductos]=useState([])
 
     useEffect(()=>{
 
-        fetch(`https://fakestoreapi.com/products/${productoId}`)
-        .then(res=>res.json())
-        .then(product=>setProduct( <ItemDetail key={product.id} id={"product" + product.id} data={product} />))
+            fetch(`https://fakestoreapi.com/products/${productoId}`)
+            .then(res=>res.json())
+            .then(productos=>setProductos(<ItemDetail key={productos.id} id={"productos" + productos.id} data={productos} />))
         
-    }, [productoId])
+    },[productoId] )
 
 
 
   return (
     <div className='itemDetailContainer'>
-    {product}
+    {productos}
     </div>
   )
 }

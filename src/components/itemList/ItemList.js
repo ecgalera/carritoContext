@@ -17,6 +17,8 @@ const ItemList = () => {
 
   useEffect(() => {
 
+    
+
     if(categoryId!= null){
 
       fetch(`https://fakestoreapi.com/products/category/${categoryId}`)
@@ -31,7 +33,7 @@ const ItemList = () => {
 
     }
 
-  },[])
+  },[categoryId])
 
   
   return (
@@ -39,12 +41,12 @@ const ItemList = () => {
     <div>
     <div className='button'>
     <h3>Seleccione por Categoría</h3>
-    <Link style={{ fontWeight:"bolder", textDecorationLine:"none"}} to="/product">Haga click aquí para cambiar de categoria</Link>
+    <Link style={{ fontWeight:"bolder", textDecorationLine:"none"}} to="/product">Haga click aquí para cambiar de category</Link>
 
-    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}} to={'/categoria/jewelery'}>Joyeria</Link></li>
-    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}}to={'/categoria/electronics'}>Electronica</Link></li>
-    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}}to={"/categoria/men's clothing"}>Ropa de Hombre</Link></li>
-    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}}to={"/categoria/women's clothing"}>Ropa de Mujer</Link></li>
+    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}} to={'/product/category/jewelery'}>Joyeria</Link></li>
+    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}}to={'/product/category/electronics'}>Electronica</Link></li>
+    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}}to={"/product/category/men's clothing"}>Ropa de Hombre</Link></li>
+    <li><Link style={{ fontWeight:"bolder", textDecorationLine:"none"}}to={"/product/category/women's clothing"}>Ropa de Mujer</Link></li>
     </div>
 
     
